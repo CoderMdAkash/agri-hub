@@ -1,0 +1,303 @@
+$(document).ready(function () {
+    // Default fallback data in case browser blocks AJAX on file:// protocol
+    var defaultContentData = {
+        "resources": [
+            {
+                "id": 1,
+                "title": "Farming Guides",
+                "category": "Methodology",
+                "image": "images/service1.jpg",
+                "description": "Step-by-step tutorials on soil preparation, seasonal crop schedules (Kharif/Rabi), organic methods, and smart irrigation.",
+                "fullDetails": "Comprehensive guide covering land tilling, organic manure application, seed germination testing, and water-saving micro-drip techniques tailored for optimal seasonal yield.",
+                "tips": [
+                    "Perform soil pH testing before applying chemical fertilizers",
+                    "Use certified disease-resistant seed varieties for planting",
+                    "Implement alternate wetting and drying (AWD) water management"
+                ],
+                "link": "javascript:void(0)",
+                "buttonText": "Explore Guides"
+            },
+            {
+                "id": 2,
+                "title": "Crop Details",
+                "category": "Crop Science",
+                "image": "images/service2.jpg",
+                "description": "Comprehensive crop catalog covering grains, fruits, vegetables, and cash crops with soil requirements, cultivation, and nutrition profiles.",
+                "fullDetails": "Detailed catalog with soil requirements, recommended growth temperature (20°C - 32°C), harvesting schedules, and nutritional profiles for major cereal, vegetable, and cash crops.",
+                "tips": [
+                    "Ensure clay-loam soil for maximum moisture retention in rice",
+                    "Maintain proper plant-to-plant spacing for airflow and sunlight",
+                    "Apply balanced NPK ratios according to growth stage requirements"
+                ],
+                "link": "javascript:void(0)",
+                "buttonText": "View Crop Profiles"
+            },
+            {
+                "id": 3,
+                "title": "Pest Control Strategies",
+                "category": "Plant Protection",
+                "image": "images/service3.jpg",
+                "description": "Integrated Pest Management (IPM) techniques, biological controls, organic remedies, and early pest identification guidelines.",
+                "fullDetails": "Integrated Pest Management (IPM) guide featuring organic neem oil spray preparation, yellow sticky traps, predatory insect deployment, and early fungal blight detection.",
+                "tips": [
+                    "Inspect under leaf surfaces twice weekly for early pest infestation signs",
+                    "Apply organic neem oil spray during early morning or late afternoon",
+                    "Rotate crop families seasonally to break pest breeding life cycles"
+                ],
+                "link": "javascript:void(0)",
+                "buttonText": "Learn IPM Strategies"
+            }
+        ],
+        "impact": [
+            {
+                "icon": "fa-seedling",
+                "count": "50+",
+                "title": "Crop Profiles"
+            },
+            {
+                "icon": "fa-book-open",
+                "count": "100+",
+                "title": "Farming Guides"
+            },
+            {
+                "icon": "fa-user-tie",
+                "count": "30+",
+                "title": "Specialists"
+            },
+            {
+                "icon": "fa-headset",
+                "count": "24/7",
+                "title": "Hotline Support"
+            }
+        ],
+        "news": [
+            {
+                "id": 1,
+                "title": "Smart Irrigation Systems",
+                "image": "images/news1.jpg",
+                "date": "15 March",
+                "description": "Discover how automated drip irrigation conserves water while maximizing crop yields.",
+                "link": "blog-details.html"
+            },
+            {
+                "id": 2,
+                "title": "Organic Fertilizer Secrets",
+                "image": "images/news2.jpg",
+                "date": "15 March",
+                "description": "Learn the benefits of bio-fertilizers in sustaining long term soil health and fertility.",
+                "link": "blog-details.html"
+            },
+            {
+                "id": 3,
+                "title": "Crop Rotation Strategies",
+                "image": "images/news3.jpg",
+                "date": "15 March",
+                "description": "Enhance pest management and nutrient cycles through seasonal crop rotation schedules.",
+                "link": "blog-details.html"
+            }
+        ],
+        "farmingGuides": [
+            {
+                "id": 101,
+                "title": "Paddy Rice Cultivation Guide",
+                "category": "Cereal Crops",
+                "image": "images/service1.jpg",
+                "description": "Complete guide from seed bed preparation, seedling transplanting, water management to harvesting.",
+                "fullDetails": "Comprehensive paddy rice production manual outlining field levelling, puddle tillage, 14-day seedling transplantation, weed management, and grain drying standards.",
+                "tips": [
+                    "Soak seeds for 24 hours prior to seedbed broadcasting",
+                    "Maintain 2-3 cm standing water during tillering stage",
+                    "Harvest when 80-85% of panicles turn golden yellow"
+                ],
+                "link": "javascript:void(0)",
+                "buttonText": "Explore Guide"
+            },
+            {
+                "id": 102,
+                "title": "Soil Testing & NPK Fertilizer Guide",
+                "category": "Soil Science",
+                "image": "images/service2.jpg",
+                "description": "Understand soil pH levels, organic composting, and balanced NPK fertilizer application ratios.",
+                "fullDetails": "Soil fertility guide detailing soil core sampling, electrical conductivity testing, organic compost enrichment, and split application of Nitrogen (Urea), Phosphorus (TSP), and Potassium (MoP).",
+                "tips": [
+                    "Take 10-15 random soil core samples per acre for testing",
+                    "Apply Phosphorus (TSP) completely during final land preparation",
+                    "Split Nitrogen (Urea) into 3 equal top-dressings"
+                ],
+                "link": "javascript:void(0)",
+                "buttonText": "Explore Guide"
+            },
+            {
+                "id": 103,
+                "title": "High Yield Vegetable Farming",
+                "category": "Horticulture",
+                "image": "images/service3.jpg",
+                "description": "Modern greenhouse and open field vegetable production practices for maximum market yield.",
+                "fullDetails": "Horticultural production guide focusing on raised bed cultivation, plastic mulching for moisture retention, vertical trellis netting, and micro-nutrient foliar sprays.",
+                "tips": [
+                    "Use silver-black plastic mulch to suppress weeds and retain soil moisture",
+                    "Prune lower yellow leaves to improve canopy ventilation",
+                    "Foliar spray Boron and Calcium to prevent blossom end rot in tomatoes"
+                ],
+                "link": "javascript:void(0)",
+                "buttonText": "Explore Guide"
+            }
+        ]
+    };
+
+    var currentLoadedData = defaultContentData;
+
+    // Inject Simple Clean Modal HTML if not present
+    if (!$('#guideModal').length) {
+        var simpleModalHtml = `
+        <div class="modal fade" id="guideModal" tabindex="-1" role="dialog" aria-hidden="true">
+           <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content border-0 shadow-sm rounded">
+                 <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title font-weight-bold text-dark" id="guideModalTitle">Guide Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                    </button>
+                 </div>
+                 <div class="modal-body pt-3">
+                    <img id="guideModalImage" src="" alt="Guide Image" class="img-fluid rounded mb-3 w-100" style="max-height: 200px; object-fit: cover;">
+                    <p id="guideModalDescription" class="text-secondary small mb-3"></p>
+                    <div id="guideModalDetails" class="small text-dark mb-3"></div>
+                    <ul id="guideModalTips" class="small pl-3 text-muted mb-0"></ul>
+                 </div>
+                 <div class="modal-footer border-top-0 pt-0">
+                    <button type="button" class="btn btn-secondary btn-sm px-4" data-dismiss="modal">Close</button>
+                 </div>
+              </div>
+           </div>
+        </div>`;
+        $('body').append(simpleModalHtml);
+    }
+
+    // Render Function
+    function renderContent(data) {
+        currentLoadedData = data;
+
+        // 1. Render Core Resources
+        if (data.resources && $('#resources-container').length) {
+            var resourceHtml = '';
+            $.each(data.resources, function (index, item) {
+                resourceHtml += `
+                    <div class="col-md-4 mb-4">
+                       <div class="services_box_main">
+                          <div class="services_box text_align_left">
+                             <figure><img src="${item.image}" alt="${item.title}"/></figure>
+                             <div class="veget">
+                                <h3>${item.title}</h3>
+                                <p>${item.description}</p>
+                             </div>
+                          </div>
+                          <a class="read_more_btn open-guide-modal" href="javascript:void(0)" data-type="resources" data-id="${item.id}">${item.buttonText} <i class="fa fa-arrow-right ml-1"></i></a>
+                       </div>
+                    </div>`;
+            });
+            $('#resources-container').html(resourceHtml);
+        }
+
+        // 2. Render Hub Impact
+        if (data.impact && $('#impact-container').length) {
+            var impactHtml = '';
+            $.each(data.impact, function (index, item) {
+                impactHtml += `
+                    <div class="col-lg-3 col-md-6 mb-4">
+                       <div class="impact_card text_align_center">
+                          <div class="impact_icon"><i class="fa ${item.icon}"></i></div>
+                          <h3>${item.count}</h3>
+                          <span>${item.title}</span>
+                       </div>
+                    </div>`;
+            });
+            $('#impact-container').html(impactHtml);
+        }
+
+        // 3. Render Latest News
+        if (data.news && $('#news-container').length) {
+            var newsHtml = '';
+            $.each(data.news, function (index, item) {
+                newsHtml += `
+                    <div class="col-md-4 mb-4">
+                       <div class="latest ${index === 1 ? 'box_desho' : ''}">
+                          <figure><img src="${item.image}" alt="${item.title}"/></figure>
+                          <span>${item.date}</span>
+                          <div class="nostrud">
+                             <h3>${item.title}</h3>
+                             <p>${item.description}</p>
+                             <a class="read_more" href="${item.link}">Read More</a>
+                          </div>
+                       </div>
+                    </div>`;
+            });
+            $('#news-container').html(newsHtml);
+        }
+
+        // 4. Render Farming Guides
+        if (data.farmingGuides && $('#guides-container').length) {
+            var guidesHtml = '';
+            $.each(data.farmingGuides, function (index, item) {
+                guidesHtml += `
+                    <div class="col-md-4 mb-4">
+                       <div class="services_box_main">
+                          <div class="services_box text_align_left">
+                             <figure><img src="${item.image}" alt="${item.title}"/></figure>
+                             <div class="veget">
+                                <span class="badge badge-success mb-2">${item.category}</span>
+                                <h3>${item.title}</h3>
+                                <p>${item.description}</p>
+                             </div>
+                          </div>
+                          <a class="read_more_btn open-guide-modal" href="javascript:void(0)" data-type="farmingGuides" data-id="${item.id}">${item.buttonText} <i class="fa fa-arrow-right ml-1"></i></a>
+                       </div>
+                    </div>`;
+            });
+            $('#guides-container').html(guidesHtml);
+        }
+    }
+
+    // Modal Click Event Handler
+    $(document).on('click', '.open-guide-modal', function (e) {
+        e.preventDefault();
+        var itemId = $(this).data('id');
+        var dataType = $(this).data('type') || 'resources';
+        var itemsList = currentLoadedData[dataType] || defaultContentData[dataType];
+
+        var guide = itemsList.find(function (item) {
+            return item.id == itemId;
+        });
+
+        if (guide) {
+            $('#guideModalTitle').text(guide.title);
+            $('#guideModalImage').attr('src', guide.image).attr('alt', guide.title);
+            $('#guideModalDescription').text(guide.description);
+            $('#guideModalDetails').text(guide.fullDetails || guide.description);
+
+            var tipsHtml = '';
+            if (guide.tips && guide.tips.length) {
+                $.each(guide.tips, function (i, tip) {
+                    tipsHtml += `<li class="mb-1">${tip}</li>`;
+                });
+            }
+            $('#guideModalTips').html(tipsHtml);
+
+            $('#guideModal').modal('show');
+        }
+    });
+
+    // Try fetching via AJAX first
+    $.ajax({
+        url: 'data/content.json',
+        type: 'GET',
+        dataType: 'json',
+        success: function (data) {
+            renderContent(data);
+        },
+        error: function () {
+            console.log('AJAX request failed or restricted by browser CORS (file:// protocol). Using fallback JSON data.');
+            renderContent(defaultContentData);
+        }
+    });
+});
