@@ -183,30 +183,14 @@ $(document).ready(function () {
     }
 
     // Render Farming Guides Page
-    function renderGuidesPage(data, filterCategory, searchQuery) {
+    function renderGuidesPage(data) {
         if ($('#guides-grid-container').length && data.farmingGuides) {
             var html = '';
             var items = data.farmingGuides;
 
-            if (filterCategory && filterCategory !== 'All') {
-                items = items.filter(function (guide) {
-                    return guide.category.toLowerCase() === filterCategory.toLowerCase();
-                });
-            }
-
-            if (searchQuery) {
-                var query = searchQuery.toLowerCase().trim();
-                items = items.filter(function (guide) {
-                    return guide.title.toLowerCase().includes(query) ||
-                           guide.description.toLowerCase().includes(query) ||
-                           guide.category.toLowerCase().includes(query);
-                });
-            }
-
             if (items.length === 0) {
                 html = `<div class="col-12 text-center py-5">
-                          <h4 class="text-muted">No farming guides match your filter.</h4>
-                          <p class="text-secondary small">Try selecting another category or clear your search phrase.</p>
+                          <h4 class="text-muted">No farming guides available.</h4>
                         </div>`;
             } else {
                 $.each(items, function (i, item) {
@@ -339,20 +323,6 @@ $(document).ready(function () {
     });
 
     // Live Search & Filter Handlers
-    $('#guide-search-input').on('keyup', function () {
-        var query = $(this).val();
-        var activeFilter = $('.filter-pill.active').text().trim();
-        renderGuidesPage(loadedData, activeFilter, query);
-    });
-
-    $('.filter-pill').on('click', function () {
-        $('.filter-pill').removeClass('active');
-        $(this).addClass('active');
-        var filter = $(this).text().trim();
-        var query = $('#guide-search-input').val();
-        renderGuidesPage(loadedData, filter, query);
-    });
-
     $('#pest-search-input').on('keyup', function () {
         var query = $(this).val();
         renderPestPage(loadedData, query);
@@ -395,7 +365,7 @@ $(document).ready(function () {
     function initAll(data) {
         loadedData = data;
         renderHomeResources(data);
-        renderGuidesPage(data, 'All', '');
+        renderGuidesPage(data);
         renderPestPage(data, '');
         renderFAQPage(data, '');
     }
