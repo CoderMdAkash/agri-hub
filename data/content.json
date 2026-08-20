@@ -2,96 +2,70 @@
   "resources": [
     {
       "id": 1,
-      "title": "Farming Guides",
+      "title": "Farming Guides & Practices",
       "category": "Methodology",
       "image": "images/service1.jpg",
-      "description": "Step-by-step tutorials on soil preparation, seasonal crop schedules (Kharif/Rabi), organic methods, and smart irrigation.",
-      "fullDetails": "Comprehensive guide covering land tilling, organic manure application, seed germination testing, and water-saving micro-drip techniques tailored for optimal seasonal yield.",
+      "description": "Step-by-step tutorials on soil preparation, seasonal crop schedules, organic farming, and micro-drip irrigation.",
+      "fullDetails": "Comprehensive guide covering land tilling, organic compost application, seed germination testing, and water-saving precision micro-drip techniques tailored for optimal seasonal yield.",
       "tips": [
         "Perform soil pH testing before applying chemical fertilizers",
         "Use certified disease-resistant seed varieties for planting",
         "Implement alternate wetting and drying (AWD) water management"
       ],
-      "link": "javascript:void(0)",
+      "link": "farming-guides.html",
       "buttonText": "Explore Guides"
     },
     {
       "id": 2,
-      "title": "Crop Details",
+      "title": "Crop Science & Profiles",
       "category": "Crop Science",
       "image": "images/service2.jpg",
-      "description": "Comprehensive crop catalog covering grains, fruits, vegetables, and cash crops with soil requirements, cultivation, and nutrition profiles.",
+      "description": "Catalog covering grains, fruits, vegetables, and cash crops with soil specs, climate requirements, and harvesting.",
       "fullDetails": "Detailed catalog with soil requirements, recommended growth temperature (20°C - 32°C), harvesting schedules, and nutritional profiles for major cereal, vegetable, and cash crops.",
       "tips": [
         "Ensure clay-loam soil for maximum moisture retention in rice",
         "Maintain proper plant-to-plant spacing for airflow and sunlight",
         "Apply balanced NPK ratios according to growth stage requirements"
       ],
-      "link": "javascript:void(0)",
+      "link": "crop-details.html",
       "buttonText": "View Crop Profiles"
     },
     {
       "id": 3,
-      "title": "Pest Control Strategies",
+      "title": "Integrated Pest Control",
       "category": "Plant Protection",
       "image": "images/service3.jpg",
-      "description": "Integrated Pest Management (IPM) techniques, biological controls, organic remedies, and early pest identification guidelines.",
+      "description": "IPM techniques, biological insect controls, bio-neem remedies, and early pest symptom identification.",
       "fullDetails": "Integrated Pest Management (IPM) guide featuring organic neem oil spray preparation, yellow sticky traps, predatory insect deployment, and early fungal blight detection.",
       "tips": [
         "Inspect under leaf surfaces twice weekly for early pest infestation signs",
         "Apply organic neem oil spray during early morning or late afternoon",
         "Rotate crop families seasonally to break pest breeding life cycles"
       ],
-      "link": "javascript:void(0)",
-      "buttonText": "Learn IPM Strategies"
+      "link": "pest-control.html",
+      "buttonText": "Learn Pest Control"
     }
   ],
   "impact": [
     {
       "icon": "fa-seedling",
-      "count": "50+",
-      "title": "Crop Profiles"
+      "count": "85+",
+      "title": "Verified Crop Profiles"
     },
     {
       "icon": "fa-book-open",
-      "count": "100+",
+      "count": "150+",
       "title": "Farming Guides"
     },
     {
-      "icon": "fa-user-tie",
-      "count": "30+",
-      "title": "Specialists"
+      "icon": "fa-user-nurse",
+      "count": "45+",
+      "title": "Agricultural Specialists"
     },
     {
       "icon": "fa-headset",
       "count": "24/7",
-      "title": "Hotline Support"
-    }
-  ],
-  "news": [
-    {
-      "id": 1,
-      "title": "Smart Irrigation Systems",
-      "image": "images/news1.jpg",
-      "date": "15 March",
-      "description": "Discover how automated drip irrigation conserves water while maximizing crop yields.",
-      "link": "blog-details.html"
-    },
-    {
-      "id": 2,
-      "title": "Organic Fertilizer Secrets",
-      "image": "images/news2.jpg",
-      "date": "15 March",
-      "description": "Learn the benefits of bio-fertilizers in sustaining long term soil health and fertility.",
-      "link": "blog-details.html"
-    },
-    {
-      "id": 3,
-      "title": "Crop Rotation Strategies",
-      "image": "images/news3.jpg",
-      "date": "15 March",
-      "description": "Enhance pest management and nutrient cycles through seasonal crop rotation schedules.",
-      "link": "blog-details.html"
+      "title": "Advisor Hotline"
     }
   ],
   "farmingGuides": [
@@ -108,11 +82,11 @@
         "Harvest when 80-85% of panicles turn golden yellow"
       ],
       "link": "javascript:void(0)",
-      "buttonText": "Explore Guide"
+      "buttonText": "Read Guide"
     },
     {
       "id": 102,
-      "title": "Soil Testing & NPK Fertilizer Guide",
+      "title": "Soil Testing & NPK Fertilizer Management",
       "category": "Soil Science",
       "image": "images/service2.jpg",
       "description": "Understand soil pH levels, organic composting, and balanced NPK fertilizer application ratios.",
@@ -123,7 +97,7 @@
         "Split Nitrogen (Urea) into 3 equal top-dressings"
       ],
       "link": "javascript:void(0)",
-      "buttonText": "Explore Guide"
+      "buttonText": "Read Guide"
     },
     {
       "id": 103,
@@ -138,7 +112,135 @@
         "Foliar spray Boron and Calcium to prevent blossom end rot in tomatoes"
       ],
       "link": "javascript:void(0)",
-      "buttonText": "Explore Guide"
+      "buttonText": "Read Guide"
+    },
+    {
+      "id": 104,
+      "title": "Smart Micro-Drip Irrigation Systems",
+      "category": "Irrigation",
+      "image": "images/chose.jpg",
+      "description": "Conserve up to 60% water using gravity drip lines and solar-powered fertigation setups.",
+      "fullDetails": "Technical installation and maintenance guide for micro-drip emitters, sand filters, pressure regulators, and venturi fertigation injectors in high-value crop fields.",
+      "tips": [
+        "Flush lateral drip lines every 15 days to remove silt sediment",
+        "Install a 120-mesh screen filter to prevent emitter clogging",
+        "Irrigate during early morning hours to minimize evaporative loss"
+      ],
+      "link": "javascript:void(0)",
+      "buttonText": "Read Guide"
+    }
+  ],
+  "cropDetails": [
+    {
+      "id": 201,
+      "name": "Hybrid Paddy Rice (BRRI dhan29)",
+      "type": "Grains",
+      "image": "images/service1.jpg",
+      "season": "Boro (Nov - May)",
+      "soil": "Clay-Loam",
+      "temp": "20°C - 35°C",
+      "water": "High (1200mm)",
+      "duration": "155 - 160 Days",
+      "description": "High-yielding cereal grain widely cultivated in South Asia with high resilience to lodging.",
+      "fullDetails": "BRRI dhan29 is a premium Boro season rice variety producing 7.5 to 8.5 tons per hectare. Thrives in sub-flooded clay soils with proper NPK nutrient top-dressing at tillering and panicle initiation.",
+      "nutrients": "High carbohydrate, energy-dense, source of B-vitamins"
+    },
+    {
+      "id": 202,
+      "name": "Bari Tomato 14 (Summer Variety)",
+      "type": "Vegetables",
+      "image": "images/service3.jpg",
+      "season": "Year-Round / Summer",
+      "soil": "Well-drained Sandy-Loam",
+      "temp": "18°C - 28°C",
+      "water": "Moderate (Drip)",
+      "duration": "90 - 110 Days",
+      "description": "Heat-tolerant, bacterial wilt-resistant tomato variety ideal for greenhouse and tunnel farming.",
+      "fullDetails": "Bari Tomato 14 features uniform deep-red fruits weighing 80-100g each. Offers high vitamin C content and solid shelf-life, suited for fresh market supply and processing.",
+      "nutrients": "Rich in Lycopene, Vitamin C, Vitamin A, Potassium"
+    },
+    {
+      "id": 203,
+      "name": "Yellow Maize / Corn (Pioneer 3355)",
+      "type": "Cash Crops",
+      "image": "images/about_img1.jpg",
+      "season": "Rabi / Kharif",
+      "soil": "Deep Loam & Alluvial",
+      "temp": "15°C - 30°C",
+      "water": "Moderate",
+      "duration": "130 - 140 Days",
+      "description": "High starch grain used for poultry feed, flour production, and industrial biofuel extraction.",
+      "fullDetails": "Robust maize hybrid with tight husk cover preventing cob-borer infestation. Yield potential ranges from 10-12 metric tons per hectare under optimal fertigation.",
+      "nutrients": "Carbohydrates, Fiber, Lutein, Zeaxanthin"
+    },
+    {
+      "id": 204,
+      "name": "Organic Cavendish Banana",
+      "type": "Fruits",
+      "image": "images/about_img.jpg",
+      "season": "Perennial",
+      "soil": "Rich Organic Loam",
+      "temp": "26°C - 35°C",
+      "water": "High (Regular Drip)",
+      "duration": "11 - 12 Months",
+      "description": "Fast-growing perennial fruit crop requiring windbreak barriers and heavy organic mulching.",
+      "fullDetails": "Cavendish produces heavy bunches weighing 25-35 kg with sweet, seedless yellow fingers. Requires high Potassium fertilizer inputs and de-suckering management.",
+      "nutrients": "Potassium, Vitamin B6, Dietary Fiber, Magnesium"
+    }
+  ],
+  "pestControl": [
+    {
+      "id": 301,
+      "title": "Yellow Stem Borer Management",
+      "targetCrop": "Rice / Paddy",
+      "symptom": "Dead hearts in vegetative stage and white heads at flowering stage",
+      "remedy": "Deploy Trichogramma egg parasitoids, install light traps, spray 5% Neem seed kernel extract (NSKE).",
+      "prevention": "Avoid excess nitrogen fertilizer, clip leaf tips before transplanting seedlings.",
+      "image": "images/news2.jpg"
+    },
+    {
+      "id": 302,
+      "title": "Tomato Late Blight Control",
+      "targetCrop": "Tomato & Potato",
+      "symptom": "Water-soaked dark lesions on leaf edges and white mold growth beneath leaves",
+      "remedy": "Foliar spray copper oxychloride or Trichoderma harzianum bio-fungicide during high humidity.",
+      "prevention": "Maintain wide plant spacing, practice crop rotation with non-solanaceous crops.",
+      "image": "images/service3.jpg"
+    },
+    {
+      "id": 303,
+      "title": "Fall Armyworm (FAW) IPM Strategy",
+      "targetCrop": "Maize / Corn",
+      "symptom": "Ragged holes on whorl leaves and sawdust-like frass inside crop whorls",
+      "remedy": "Apply Spinetoram or Bacillus thuringiensis (Bt) dust directly into crop whorls.",
+      "prevention": "Intercrop maize with cowpea or desmodium, deploy pheromone lure traps early.",
+      "image": "images/service2.jpg"
+    }
+  ],
+  "faqs": [
+    {
+      "id": 401,
+      "category": "General",
+      "question": "What is the primary mission of the Agricultural Information Hub (Agri-Hub)?",
+      "answer": "Agri-Hub is a free digital platform dedicated to empowering farmers and extension agents with scientific crop information, seasonal calendars, IPM pest remedies, and direct access to agricultural specialists."
+    },
+    {
+      "id": 402,
+      "category": "Cultivation",
+      "question": "How can I request a soil test for my agricultural land?",
+      "answer": "You can fill out our Specialist Advisory form on the Contact page or visit your nearest Upazila Agriculture Office (DAE). Collect 10-15 soil core samples at a 15cm depth across your plot for accurate lab testing."
+    },
+    {
+      "id": 403,
+      "category": "Pest Control",
+      "question": "What are organic alternatives to synthetic chemical pesticides?",
+      "answer": "Organic options include 5% Neem Seed Kernel Extract (NSKE), yellow & blue sticky pheromone traps, biopesticides like Trichoderma and Bacillus thuringiensis, and encouraging natural predators like ladybird beetles."
+    },
+    {
+      "id": 404,
+      "category": "Irrigation",
+      "question": "What is Alternate Wetting and Drying (AWD) in paddy farming?",
+      "answer": "AWD is a water-saving technology where paddy fields are allowed to dry periodically until water level drops 15 cm below soil surface before re-flooding. This saves up to 30% irrigation water without reducing yield."
     }
   ]
 }

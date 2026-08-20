@@ -4,239 +4,166 @@
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Agricultural Information Hub - Home</title>
-
+   <title>Agri-Hub | Agricultural Information & Extension Portal</title>
+   
    <link rel="stylesheet" href="css/bootstrap.min.css">
    <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/responsive.css">
    <link rel="icon" href="images/fevicon.png" type="image/gif" />
-   <link rel="stylesheet" href="css/owl.carousel.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-   <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
 </head>
-<body class="main-layout">
+<body>
 
-   <!-- loader -->
-   <div class="loader_bg">
-      <div class="loader"><img src="images/loading.gif" alt="#"/></div>
-   </div>
-
-   <!-- header section -->
+   <!-- Simple & Exact Header Navbar -->
    <header class="header-area">
-      <div class="container-fluid px-lg-4">
-         <div class="row align-items-center">
-            <div class="col-lg-3 col-md-3 col-6">
-               <div class="logo">
-                  <a href="index.html" class="d-flex align-items-center font-weight-bold text-decoration-none">
-                     <i class="fa fa-leaf text-success mr-2" style="font-size: 22px;"></i>
-                     <span class="text-dark h4 font-weight-bold mb-0">Agri<span style="color: #6b7908;">Hub</span></span>
-                  </a>
-               </div>
-            </div>
-            <div class="col-lg-9 col-md-9 col-6">
-               <div class="navbar-area">
-                  <nav class="site-navbar">
-                     <ul class="nav-menu">
-                        <li><a class="active" href="index.html">Home</a></li>
-                        <li><a href="farming-guides.html">Farming Guides</a></li>
-                        <li><a href="crop-details.html">Crop Details</a></li>
-                        <li><a href="pest-control.html">Pest Control</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                     </ul>
-                  </nav>
-               </div>
+      <nav class="navbar navbar-expand-lg navbar-light">
+         <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+               <span>Agri<span style="color: var(--primary);">Hub</span></span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="farming-guides.html">Farming Guides</a></li>
+                  <li class="nav-item"><a class="nav-link" href="pest-control.html">Pest Control</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+               </ul>
             </div>
          </div>
-      </div>
+      </nav>
    </header>
 
-   <div class="full_bg">
-      <div class="slider_main">
-         <div id="banner1" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
-            <ol class="carousel-indicators">
-               <li data-target="#banner1" data-slide-to="0" class="active"></li>
-               <li data-target="#banner1" data-slide-to="1"></li>
-               <li data-target="#banner1" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <div class="carousel-img-wrap">
-                     <img src="images/banner.jpg" alt="Agricultural Information Hub" class="d-block img-fluid">
-                     <div class="carousel-overlay"></div>
+   <!-- Standard Default Bootstrap Carousel Slider -->
+   <section class="hero-slider-wrap">
+      <div id="heroCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img src="images/banner.jpg" class="d-block w-100" alt="Agricultural Information & Advisory Hub" style="height: 520px; object-fit: cover;">
+               <div class="carousel-caption d-none d-md-block pb-5">
+                  <div class="mb-3">
+                     <span class="badge px-3 py-2 text-uppercase font-weight-bold text-white shadow-sm" style="background-color: var(--primary); font-size: 0.85rem; letter-spacing: 0.08em;">Empowering Farmers Nationally</span>
                   </div>
-                  <div class="carousel-caption d-none d-md-block">
-                     <div class="slider-content">
-                        <span class="badge badge-success px-3 py-2 text-uppercase mb-2" style="background-color: #6b7908; font-size: 0.85rem;">Empowering Farmers</span>
-                        <h2 class="display-4 font-weight-bold text-white mb-2">Agricultural Information Hub</h2>
-                        <p class="lead text-white-50 mx-auto mb-4" style="max-width: 650px;">Your comprehensive resource for verified farming guides, crop details, pest control, and expert advisory.</p>
-                        <div class="banner-buttons">
-                           <a href="farming-guides.html" class="btn btn-success btn-lg px-4 py-2 mr-2 font-weight-bold" style="background-color: #6b7908; border-color: #6b7908;">Explore Farming Guides</a>
-                           <a href="contact.html" class="btn btn-outline-light btn-lg px-4 py-2 font-weight-bold">Ask An Expert</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="carousel-img-wrap">
-                     <img src="images/chose.jpg" alt="Farming Guides & Practices" class="d-block img-fluid">
-                     <div class="carousel-overlay"></div>
-                  </div>
-                  <div class="carousel-caption d-none d-md-block">
-                     <div class="slider-content">
-                        <span class="badge badge-warning px-3 py-2 text-uppercase mb-2" style="font-size: 0.85rem;">Modern Methodology</span>
-                        <h2 class="display-4 font-weight-bold text-white mb-2">Farming Guides & Tutorials</h2>
-                        <p class="lead text-white-50 mx-auto mb-4" style="max-width: 650px;">Master soil preparation, organic bio-fertilizers, paddy rice cultivation, and smart micro-drip irrigation.</p>
-                        <div class="banner-buttons">
-                           <a href="farming-guides.html" class="btn btn-warning text-dark btn-lg px-4 py-2 mr-2 font-weight-bold">View Guides</a>
-                           <a href="crop-details.html" class="btn btn-outline-light btn-lg px-4 py-2 font-weight-bold">Crop Profiles</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="carousel-img-wrap">
-                     <img src="images/news2.jpg" alt="Integrated Pest Management" class="d-block img-fluid">
-                     <div class="carousel-overlay"></div>
-                  </div>
-                  <div class="carousel-caption d-none d-md-block">
-                     <div class="slider-content">
-                        <span class="badge badge-info px-3 py-2 text-uppercase mb-2" style="font-size: 0.85rem;">Plant Health & Protection</span>
-                        <h2 class="display-4 font-weight-bold text-white mb-2">Integrated Pest Control Strategies</h2>
-                        <p class="lead text-white-50 mx-auto mb-4" style="max-width: 650px;">Identify common crop pests, prevent infestations early, and implement biological & organic control remedies.</p>
-                        <div class="banner-buttons">
-                           <a href="pest-control.html" class="btn btn-info btn-lg px-4 py-2 mr-2 font-weight-bold">Pest Control Guide</a>
-                           <a href="contact.html" class="btn btn-outline-light btn-lg px-4 py-2 font-weight-bold">Consult Specialist</a>
-                        </div>
-                     </div>
+                  <h1 class="display-4 font-weight-bold text-white mb-2">Agricultural Information & Advisory Hub</h1>
+                  <p class="lead text-white font-weight-normal mx-auto mb-4" style="max-width: 680px; text-shadow: 0 1px 4px rgba(0,0,0,0.5); font-size: 1.15rem;">Your comprehensive digital resource for verified cultivation manuals, soil health management, and specialist support.</p>
+                  <div>
+                     <a href="contact.html" class="btn btn-agri btn-lg font-weight-bold px-4 py-2">Contact Us</a>
                   </div>
                </div>
             </div>
-            <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
-               <i class="fa fa-chevron-left"></i>
-            </a>
-            <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
-               <i class="fa fa-chevron-right"></i>
-            </a>
-         </div>
-      </div>
-   </div>
-
-   <!-- about section -->
-   <div class="about">
-      <div class="container-fluid">
-         <div class="row d_flex">
-            <div class="col-lg-6 col-md-12">
-               <div class="titlepage text_align_left">
-                  <span>Welcome to Agri-Hub</span>
-                  <h2>EMPOWERING FARMERS WITH MODERN KNOWLEDGE</h2>
-                  <p>The <strong>Agricultural Information Hub</strong> serves as a comprehensive digital resource center for farmers, agricultural extension workers, and farming enthusiasts. Our mission is to enhance crop productivity, foster sustainable agricultural practices, and bridge the gap between farmers and certified agricultural specialists.</p>
+            <div class="carousel-item">
+               <img src="images/chose.jpg" class="d-block w-100" alt="Smart Crop Profiles & Cultivation" style="height: 520px; object-fit: cover;">
+               <div class="carousel-caption d-none d-md-block pb-5">
+                  <div class="mb-3">
+                     <span class="badge px-3 py-2 text-uppercase font-weight-bold text-white shadow-sm" style="background-color: var(--primary); font-size: 0.85rem; letter-spacing: 0.08em;">Soil & Agronomy Science</span>
+                  </div>
+                  <h1 class="display-4 font-weight-bold text-white mb-2">Smart Farming Guides & Cultivation</h1>
+                  <p class="lead text-white font-weight-normal mx-auto mb-4" style="max-width: 680px; text-shadow: 0 1px 4px rgba(0,0,0,0.5); font-size: 1.15rem;">Master seasonal crop calendars, soil pH testing, and high-yielding paddy and vegetable farming practices.</p>
+                  <div>
+                     <a href="contact.html" class="btn btn-agri btn-lg font-weight-bold px-4 py-2">Contact Us</a>
+                  </div>
                </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-               <div class="row d_flex">
-                  <div class="col-md-7">
-                     <div class="about_img">
-                        <figure><img src="images/about_img.jpg" alt="Farming Knowledge"/></figure>
-                     </div>
+            <div class="carousel-item">
+               <img src="images/news2.jpg" class="d-block w-100" alt="Integrated Pest Control" style="height: 520px; object-fit: cover;">
+               <div class="carousel-caption d-none d-md-block pb-5">
+                  <div class="mb-3">
+                     <span class="badge px-3 py-2 text-uppercase font-weight-bold text-white shadow-sm" style="background-color: var(--primary); font-size: 0.85rem; letter-spacing: 0.08em;">Plant Health & Protection</span>
                   </div>
-                  <div class="col-md-5">
-                     <div class="about_img">
-                        <figure><img src="images/about_img1.jpg" alt="Crop Science"/></figure>
-                     </div>
+                  <h1 class="display-4 font-weight-bold text-white mb-2">Integrated Pest Control & Disease Prevention</h1>
+                  <p class="lead text-white font-weight-normal mx-auto mb-4" style="max-width: 680px; text-shadow: 0 1px 4px rgba(0,0,0,0.5); font-size: 1.15rem;">Identify crop diseases early, implement bio-neem organic remedies, and request direct specialist support.</p>
+                  <div>
+                     <a href="contact.html" class="btn btn-agri btn-lg font-weight-bold px-4 py-2">Contact Us</a>
                   </div>
                </div>
             </div>
          </div>
+         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+         </a>
+         <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+         </a>
       </div>
-   </div>
+   </section>
 
-   <!-- services section -->
-   <div class="services">
+   <!-- Welcome / About Section (Left: Title & Desc, Right: Single Image) -->
+   <section class="py-5 bg-white">
+      <div class="container py-4">
+         <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+               <div class="section-header mb-3">
+                  <span class="section-subtitle">Welcome to Agri-Hub</span>
+                  <h2 class="section-title">EMPOWERING FARMERS WITH MODERN KNOWLEDGE</h2>
+               </div>
+               <p class="text-muted leading-relaxed mb-3">
+                  The <strong>Agricultural Information Hub (Agri-Hub)</strong> serves as a comprehensive digital resource center for farmers, agricultural extension workers, and farming enthusiasts. Our mission is to enhance crop productivity, foster sustainable agricultural practices, and bridge the gap between farmers and certified agricultural specialists.
+               </p>
+               <p class="text-muted leading-relaxed mb-0">
+                  Through scientific research, soil health diagnostics, seasonal crop calendars, and integrated pest management (IPM), Agri-Hub provides actionable field advice to increase yields and protect rural livelihoods across the country.
+               </p>
+            </div>
+            <div class="col-lg-6">
+               <div class="about-img-wrap">
+                  <img src="images/about_img.jpg" alt="Farming Knowledge" class="img-fluid rounded-lg shadow-md w-100" style="height: 360px; object-fit: cover;">
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Core Agricultural Resources Section -->
+   <section class="py-5" style="background-color: var(--light-bg);">
       <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <div class="titlepage text_align_left">
-                  <span>Core Resources</span>
-                  <h2>FEATURED HUB SECTIONS</h2>
-               </div>
-            </div>
+         <div class="section-header text-center">
+            <span class="section-subtitle">Core Platform Features</span>
+            <h2 class="section-title">Explore Agricultural Information</h2>
          </div>
-         <!-- Core Resources Dynamic AJAX Container -->
          <div id="resources-container" class="row"></div>
       </div>
-   </div>
+   </section>
 
-   <!-- impact section -->
-   <div class="choose">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <div class="titlepage text_align_center">
-                  <span class="text-white-50 text-uppercase font-weight-bold" style="letter-spacing: 1px;">Our Growth & Reach</span>
-                  <h2>HUB IMPACT & COVERAGE</h2>
-               </div>
-            </div>
-         </div>
-         <!-- Hub Impact Dynamic AJAX Container -->
-         <div id="impact-container" class="row"></div>
-      </div>
-   </div>
-
-   <!-- news section -->
-   <div class="news">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <div class="titlepage text_align_left">
-                  <span>Knowledge Updates</span>
-                  <h2>LATEST FARMING NEWS</h2>
-               </div>
-            </div>
-         </div>
-         <!-- Latest News Dynamic AJAX Container -->
-         <div id="news-container" class="row"></div>
-      </div>
-   </div>
-
-   <!-- contact section -->
-   <div class="contact">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <div class="titlepage text_align_center">
-                  <span>Expert Consultation</span>
-                  <h2>ASK AN AGRICULTURAL ADVISOR</h2>
-               </div>
-            </div>
-            <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-               <div class="contact_box shadow-lg rounded-lg bg-white p-4 p-md-5">
-                  <form id="request" class="main_form" action="#" method="POST">
+   <!-- Advisory Consultation Form Section -->
+   <section class="py-5 bg-white">
+      <div class="container py-4">
+         <div class="row justify-content-center">
+            <div class="col-lg-10">
+               <div class="contact-card">
+                  <div class="section-header text-center">
+                     <span class="section-subtitle">Expert Advisory</span>
+                     <h2 class="section-title">Ask An Agricultural Specialist</h2>
+                     <p class="text-muted small mt-2">Have questions regarding soil symptoms, pest infestation, or fertilizer timing? Submit your query to our Extension Specialists.</p>
+                  </div>
+                  <form id="request" method="POST">
                      <div class="row">
                         <div class="col-md-6 mb-3">
-                           <label class="font-weight-bold text-dark small mb-1">Your Name <span class="text-danger">*</span></label>
-                           <input class="form_control" placeholder="Enter full name" type="text" name="name" required> 
+                           <label class="font-weight-bold small text-dark">Your Name <span class="text-danger">*</span></label>
+                           <input type="text" name="name" class="form-control form-control-custom" placeholder="e.g. Md. Tariqul Islam" required>
                         </div>
                         <div class="col-md-6 mb-3">
-                           <label class="font-weight-bold text-dark small mb-1">Email Address <span class="text-danger">*</span></label>
-                           <input class="form_control" placeholder="Enter email address" type="email" name="email" required>                          
+                           <label class="font-weight-bold small text-dark">Email Address <span class="text-danger">*</span></label>
+                           <input type="email" name="email" class="form-control form-control-custom" placeholder="e.g. tariqul@agrihub.com" required>
                         </div>
                         <div class="col-md-6 mb-3">
-                           <label class="font-weight-bold text-dark small mb-1">Phone Number</label>
-                           <input class="form_control" placeholder="e.g. +8801700000000" type="text" name="phone">                          
+                           <label class="font-weight-bold small text-dark">Phone Number</label>
+                           <input type="text" name="phone" class="form-control form-control-custom" placeholder="e.g. +880 1700 000000">
                         </div>
                         <div class="col-md-6 mb-3">
-                           <label class="font-weight-bold text-dark small mb-1">Subject / Crop Name</label>
-                           <input class="form_control" placeholder="e.g. Rice Pest Issue" type="text" name="subject">                          
+                           <label class="font-weight-bold small text-dark">Subject / Crop Name</label>
+                           <input type="text" name="subject" class="form-control form-control-custom" placeholder="e.g. Boro Rice Blight Problem">
                         </div>
                         <div class="col-md-12 mb-3">
-                           <label class="font-weight-bold text-dark small mb-1">Your Question / Details <span class="text-danger">*</span></label>
-                           <textarea class="textarea form-control" rows="5" placeholder="Describe crop symptoms, field location, or questions for our advisors..." name="message" required></textarea> 
+                           <label class="font-weight-bold small text-dark">Query / Symptom Description <span class="text-danger">*</span></label>
+                           <textarea name="message" rows="4" class="form-control form-control-custom" placeholder="Describe plant leaves color, location, plot size, or fertilizer history..." required></textarea>
                         </div>
-                        
                         <div class="col-md-12 text-center">
-                           <button class="send_btn shadow" type="submit"><i class="fa fa-paper-plane mr-2"></i> Submit Inquiry</button>
+                           <button type="submit" class="btn btn-agri btn-lg px-5 py-3">Submit Specialist Inquiry</button>
                         </div>
                      </div>
                   </form>
@@ -244,86 +171,31 @@
             </div>
          </div>
       </div>
-      <div class="map-responsive mt-5">
-         <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Dhaka+Bangladesh" width="600" height="430" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
-      </div>
-   </div>
+   </section>
 
-   <!-- footer -->
-   <footer>
-      <div class="footer">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-3 col-md-6 mb-4">
-                  <div class="hedingh3 text_align_left">
-                     <h3>About AgriHub</h3>
-                     <p class="text-white-50 small mt-3" style="line-height: 1.6;">Empowering farmers with verified cultivation guides, crop profiles, Integrated Pest Management (IPM), and expert advisory services.</p>
-                     <p class="text-white-50 small mb-0"><i class="fa fa-clock mr-1 text-success"></i> Support: Sun - Thu, 9 AM - 5 PM</p>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-md-6 mb-4">
-                  <div class="hedingh3 text_align_left">
-                     <h3>Quick Links</h3>
-                     <ul class="menu_footer">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="farming-guides.html">Farming Guides</a></li>
-                        <li><a href="crop-details.html">Crop Details</a></li>
-                        <li><a href="pest-control.html">Pest Control</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-md-6 mb-4">
-                  <div class="hedingh3 text_align_left">
-                     <h3>Agri Advisory</h3>
-                     <ul class="menu_footer">
-                        <li><a href="contact.html">Hotline: 16123</a></li>
-                        <li><a href="farming-guides.html">Soil & Fertilizers</a></li>
-                        <li><a href="pest-control.html">IPM Disease Control</a></li>
-                        <li><a href="crop-details.html">Seasonal Crop Calendar</a></li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-md-6 mb-4">
-                  <div class="hedingh3 flot_right text_align_left">
-                     <h3>Contact Us</h3>
-                     <ul class="top_infomation">
-                        <li><i class="fa fa-map-marker-alt" aria-hidden="true"></i> DAE, Farmgate, Dhaka-1215</li>
-                        <li><i class="fa fa-phone" aria-hidden="true"></i> +880 1234 567890</li>
-                        <li><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@agrihub.com">info@agrihub.com</a></li>
-                     </ul>
-                  </div>
-               </div>
+   <!-- Simple & Clean Footer -->
+   <footer class="py-4 bg-dark text-white">
+      <div class="container">
+         <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <div class="mb-2 mb-md-0 d-flex align-items-center">
+               <span class="font-weight-bold h5 mb-0 text-white">Agri<span style="color: var(--accent);">Hub</span></span>
             </div>
-         </div>
-           
-         <div class="copyright">
-            <div class="container">
-               <div class="row d_flex">
-                  <div class="col-md-8">
-                     <p>© 2026 All Rights Reserved. Agri-Hub Agriculture & Farm Portal</p>
-                  </div>
-                  <div class="col-md-4">
-                     <ul class="social_icon">
-                        <li><a href="javascript:void(0)"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:void(0)"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="javascript:void(0)"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
+            <p class="mb-2 mb-md-0 small text-white-50">© 2026 Agri-Hub Agriculture Portal. All Rights Reserved.</p>
+            <ul class="list-inline mb-0 small">
+               <li class="list-inline-item"><a href="index.html" class="text-white-50 px-2">Home</a></li>
+               <li class="list-inline-item"><a href="farming-guides.html" class="text-white-50 px-2">Farming Guides</a></li>
+               <li class="list-inline-item"><a href="pest-control.html" class="text-white-50 px-2">Pest Control</a></li>
+               <li class="list-inline-item"><a href="about.html" class="text-white-50 px-2">About Us</a></li>
+               <li class="list-inline-item"><a href="faq.html" class="text-white-50 px-2">FAQ</a></li>
+               <li class="list-inline-item"><a href="contact.html" class="text-white-50 px-2">Contact</a></li>
+            </ul>
          </div>
       </div>
    </footer>
 
-   <!-- Javascript files-->
+   <!-- JavaScript Dependencies -->
    <script src="js/jquery.min.js"></script>
    <script src="js/bootstrap.bundle.min.js"></script>
-   <script src="js/jquery-3.0.0.min.js"></script>
-   <script src="js/owl.carousel.min.js"></script>
-   <script src="js/bootstrap-datepicker.min.js"></script>
-   <script src="js/custom.js"></script>
    <script src="js/app.js"></script>
 </body>
 </html>
